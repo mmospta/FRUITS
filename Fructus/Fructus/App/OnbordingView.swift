@@ -19,6 +19,7 @@ struct OnbordingView: View {
     TabView {
       ForEach(fruits[0...5]) { item in
         FruitCardView(fruit: item)
+//          .padding(.bottom, 20)
       } //: LOOP
     } //: TAB
     .tabViewStyle(PageTabViewStyle())
