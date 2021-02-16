@@ -26,7 +26,6 @@ struct SettingView: View {
           ) {
             Divider().padding(.vertical, 4)
             
-            
             HStack(alignment: .center, spacing: 10) {
               Image("logo")
                 .resizable()
@@ -40,8 +39,20 @@ struct SettingView: View {
           }
           
           // MARK: - SECTION 2
-          
+                    
           // MARK: - SECTION 3
+          GroupBox(
+            label: SettinglabelView(labelText: "Application", labelImage: "app.iphone")
+          ) {
+            SettingsRowView(name: "Developer", content: "John / Jane")
+            SettingsRowView(name: "Designer", content: "Robert Pertras")
+            SettingsRowView(name: "Website", linkLabel: "SwiftUI MasterClass", linkDestination: "swiftuimasterclass.com")
+            SettingsRowView(name: "Twitter", linkLabel: "Mos Phonthep", linkDestination: "www.google.com")
+            SettingsRowView(name: "SwiftUI", content: "2.0")
+            SettingsRowView(name: "Version", content: "1.1.1")
+            
+          }
+
           
         } //: VSTACK
         .navigationBarTitle(Text("Setting"), displayMode: .large)
